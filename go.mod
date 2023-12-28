@@ -1,4 +1,4 @@
-module golang-unit-test
+module golang-interface
 
 go 1.20
 

@@ -1,8 +1,8 @@
 package input
 
 import (
-	"golang-unit-test/input/file"
-	"golang-unit-test/input/stdin"
+	"golang-interface/input/file"
+	"golang-interface/input/stdin"
 	"os"
 )
 

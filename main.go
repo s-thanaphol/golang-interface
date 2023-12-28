@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"golang-unit-test/database"
-	"golang-unit-test/database/filelog"
-	"golang-unit-test/input"
+	"golang-interface/database"
+	"golang-interface/database/filelog"
+	"golang-interface/input"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -25,11 +25,11 @@ func main() {
 		// redis
 	}
 
-	nowCount,err := db.Get()
+	nowCount, err := db.Get()
 	if err != nil {
 		return
 	}
-	inPut,err := input.Init()
+	inPut, err := input.Init()
 	if err != nil {
 		return
 	}
