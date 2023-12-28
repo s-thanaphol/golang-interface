@@ -17,6 +17,7 @@ func (f *FileInput) ReadOneInput() (int, bool, error) {
 	}
 	res := f.data[0]
 	f.data = f.data[1:]
+	fmt.Println("Enter something: ", res)
 
 	return res, false, nil
 }
@@ -32,16 +33,13 @@ func Init() (FileInput, error) {
 	}
 
 	fileContent := string(content)
-	fmt.Println(fileContent)
 
 	// Split the content by newline
 	lines := strings.Split(fileContent, "\n")
-	fmt.Println(lines)
 
 	// Print each line
 	data := make([]int, len(lines))
 	for i, line := range lines {
-		fmt.Println(i, line)
 		intNumber, err := strconv.Atoi(line)
 		if err != nil {
 			fmt.Println("Error converting string to int:", err)
